@@ -3,72 +3,134 @@ body {
 	padding: 0;
 	width: 100vw;
 	height: 100vh;
-   display: flex;
-   align-items: center;
+ 
    justify-content: center;
-	/* overflow: hidden; */
-	
-perspective: 600px;
+   perspective: 600px;
 
 }
-.firstfloor +.secondfloor{
-
+.build{
+   position: absolute;
+   width: 400px;
+   height: 100%;
+   bottom: 0;
+  
 }
+
 
 .firstfloor{
-   width: 500px;
-   height: 500px;
-   position: relative;
-   background: green;
+   width: 100%;
+   height: 63%;
+   position:   absolute;
+   /* background: rgb(128, 0, 119); */
       transform-style: preserve-3d;
       border: 2px solid black;
-     transform: rotateX(80deg) rotateZ(-10deg);
-}
- .floor{
-   position: absolute;
-   /* top: 30%; */
-   width: 100%;
-   height: 50px;
-   background-color: blue;
-   
- 
+     transform: rotateX(95deg) rotateZ(10deg) ;
+     bottom: 0;
+     left: 0;
 }
 
-.bottom{
-   background-color: red ;
-   opacity: 0.4;
+ .floor{
+   position: absolute;
+}
+.firstfloor.second{
+   bottom: 30%;
+  
+
+
+}
+
+.firstfloor .bottom{
+   width: 100%;
+   height: 25%;
    bottom: 0;
 z-index: 5;
 transform: rotateX(-90deg);
 transform-origin:50% 100% ;
 }
-.left{
+.firstfloor .left{
    height: 100%;
-   width: 50px;
+   width: 25%;
    transform: rotateY(-90deg);
+   background-color: red;
 transform-origin:0% 50% ;
 }
-.right{
+.firstfloor .right{
    right: 0;
    height: 100%;
-   width: 50px;
+   background-color: red;
+   width: 25%;
    transform: rotateY(90deg);
 transform-origin:100% 50% ;
 }
-.top{
+.firstfloor .top{
+   width: 100%;
+   height: 25%;
    background-color: red;
    top: 0;
 z-index: 5;
 transform: rotateX(90deg);
 transform-origin:50% 0% ;
 }
-/* .secondfloor{
-   bottom: 80px;
-   width: 500px;
-   height: 500px;
-   position: absolute;
-   background: green;
-      transform-style: preserve-3d;
-      border: 2px solid black;
-      transform: rotateX(80deg);
-} */
+.firstfloor .up ,.sfli{
+  
+   width: 110%;
+   height: 110%;
+   transform: translateZ(16.5vmin)translateX(-3.5vmin)translateY(-3.5vmin);
+   background-color: black;
+   transform-style:preserve-3d ;
+
+}
+.firstfloor .sfli{
+  transform: translateZ(-0.5vmin)translateX(-3.5vmin)translateY(-3.5vmin)}
+.firstfloor .up .balcon{
+position: absolute;
+ background-color: blue;
+}
+.firstfloor .up .font{
+  
+   bottom: 0;
+   width: 100%;
+   height: 10%;
+   transform-origin:50% 100% ;
+   transform: rotateX(-90deg);
+}
+.firstfloor .up .right{
+   
+   right: 0;
+   height: 100%;
+   width: 10%;
+   transform: rotateY(90deg);
+transform-origin:100% 50% ;
+}
+.firstfloor .up .left{
+   height: 100%;
+   width: 10%;
+   transform: rotateY(-90deg);
+transform-origin:0% 50% ;
+}
+.firstfloor .up .down {
+   width: 100%;
+   height: 10%;
+   background-color: red;
+   top: 0;
+z-index: 5;
+transform: rotateX(90deg);
+transform-origin:50% 0% ;
+}
+.window{
+   display: inline-block;
+   width: 24%;
+   height: 100%;
+   background-color: #0004ff33;
+}
+.open{
+   display: inline-block;
+   width: 24%;
+   height: 100%;
+   opacity: 1;
+   background-image: repeating-linear-gradient(
+    0deg,
+    purple 0% 5%,
+    blue 5% 10%)
+    
+}
